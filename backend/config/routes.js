@@ -21,7 +21,8 @@ module.exports.routes = {
 
   '/': { view: 'pages/homepage' },
   'POST /api/board/create': 'board/create',
-  'POST /api/boarditem/create': 'boarditem/create'
+  'POST /api/boarditem/create': 'boarditem/create',
+  'GET /api/board/get-all': 'board/get-all'
 
 
   /***************************************************************************
