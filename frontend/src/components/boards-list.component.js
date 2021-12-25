@@ -34,7 +34,27 @@ export default class BoardsList extends Component {
     }
 
     render() {
-        return("hello from list");
+        const {boards} = this.state;
+        return(
+        <div>
+            {boards && boards.map((board, index) => (
+                <div className="card" style={{"width":"25rem"}}>
+                    <div className = "card-body">
+                        <h5 className = "card-title">{board.board.boardName}</h5>
+                    </div>
+                    <ul className = "list-group list-group-flush">
+                        {board.boardItems.map((listitems, sindex) => (
+                            <li className="list-group-item">{listitems.itemText}</li>
+                        ))}
+                    </ul>
+                    <div className = "card-body">
+                        <a href = "#" className="card-link">Add Item</a>
+                    </div>
+                </div>
+            ))}
+
+        </div>
+        );
     }
 
 }
