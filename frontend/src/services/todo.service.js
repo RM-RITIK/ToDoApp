@@ -4,10 +4,10 @@ class TodoDataService {
     getAll() {
         return http.get("/board/get-all");
     }
-    createBoard() {
+    createBoard(data) {
         return http.post("/board/create", data);
     }
-    addItemtoBoard() {
+    addItemtoBoard(data) {
         return http.post("/boarditem/create", data);
     }
 
