@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import TodoDataService from "../services/todo.service";
 import AddItem from "./add-item.component";
+import ItemStatus from "./item-status.component";
 
 export default class BoardsList extends Component {
     constructor(props){
@@ -45,7 +46,10 @@ export default class BoardsList extends Component {
                     </div>
                     <ul className = "list-group list-group-flush">
                         {board.boardItems.map((listitems, sindex) => (
+                            <div className="form-check">
+                            <ItemStatus boardItemId = {listitems.id} isCompleted = {listitems.isCompleted}></ItemStatus>
                             <li className="list-group-item">{listitems.itemText}</li>
+                            </div>
                         ))}
                     </ul>
                     <div className = "card-body">

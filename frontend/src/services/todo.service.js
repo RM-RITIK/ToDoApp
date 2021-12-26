@@ -10,6 +10,9 @@ class TodoDataService {
     addItemtoBoard(data) {
         return http.post("/boarditem/create", data);
     }
+    changeBoardItemStatus(data) {
+        return http.post("/boarditem/change-status", data);
+    }
 
 }
 
