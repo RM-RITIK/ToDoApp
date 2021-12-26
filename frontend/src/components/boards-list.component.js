@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import TodoDataService from "../services/todo.service";
+import AddItem from "./add-item.component";
 
 export default class BoardsList extends Component {
     constructor(props){
@@ -48,7 +49,7 @@ export default class BoardsList extends Component {
                         ))}
                     </ul>
                     <div className = "card-body">
-                        <a href = "#" className="card-link">Add Item</a>
+                        <Link to = {{pathname: "/add-item", state: [{boardId: board.board.id}]}}>Add Item</Link>
                     </div>
                 </div>
             ))}

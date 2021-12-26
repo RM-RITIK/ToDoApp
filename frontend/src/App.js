@@ -4,6 +4,7 @@ import { Switch, Route, Link } from "react-router-dom";
 import './App.css';
 
 import BoardsList from "./components/boards-list.component";
+import AddItem from "./components/add-item.component";
 
 class App extends Component {
   render() {
@@ -29,6 +30,7 @@ class App extends Component {
         <div className="container mt-3">
           <Switch>
             <Route exact path={["/", "/boards"]} component={BoardsList} />
+            <Route exact path="/add-item" component={AddItem} />
           </Switch>
         </div>
         
