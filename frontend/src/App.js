@@ -5,6 +5,7 @@ import './App.css';
 
 import BoardsList from "./components/boards-list.component";
 import AddItem from "./components/add-item.component";
+import AddBoard from "./components/add-board.component";
 
 class App extends Component {
   render() {
@@ -21,7 +22,7 @@ class App extends Component {
               </Link>
             </li>
             <li className="nav-item">
-              <Link to={"/"} className="nav-link">
+              <Link to={"/add-board"} className="nav-link">
                 Add Board
               </Link>
             </li>
@@ -31,6 +32,7 @@ class App extends Component {
           <Switch>
             <Route exact path={["/", "/boards"]} component={BoardsList} />
             <Route exact path="/add-item" component={AddItem} />
+            <Route exact path="/add-board" component={AddBoard} />
           </Switch>
         </div>
         

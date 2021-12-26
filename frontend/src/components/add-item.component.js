@@ -5,7 +5,6 @@ import TodoDataService from "../services/todo.service";
 export default class AddItem extends Component {
     constructor(props){
         super(props);
-        //console.log(this.props.location.state[0].boardId);
         this.onChangeItemText = this.onChangeItemText.bind(this);
         this.saveItem = this.saveItem.bind(this);
         this.newItem = this.newItem.bind(this);
