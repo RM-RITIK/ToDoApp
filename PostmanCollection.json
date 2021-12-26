@@ -1,0 +1,139 @@
+{
+	"info": {
+		"_postman_id": "ef1df049-85d1-4e3f-91f6-2542431cc3ad",
+		"name": "To Do App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Board",
+			"item": [
+				{
+					"name": "Create a new Board",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "boardName",
+									"value": "board1",
+									"type": "text"
+								},
+								{
+									"key": "description",
+									"value": "demo",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:1337/api/board/create",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"board",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Boards",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:1337/api/board/get-all",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"board",
+								"get-all"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "BoardItem",
+			"item": [
+				{
+					"name": "Add a new item to the board",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "boardId",
+									"value": "1",
+									"type": "text"
+								},
+								{
+									"key": "itemText",
+									"value": "item1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:1337/api/boarditem/create",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"boarditem",
+								"create"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Change Status of a Board Item",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "boardItemId",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "localhost:1337/api/boarditem/change-status",
+							"host": [
+								"localhost"
+							],
+							"port": "1337",
+							"path": [
+								"api",
+								"boarditem",
+								"change-status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

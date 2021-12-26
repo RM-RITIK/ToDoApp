@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import TodoDataService from "../services/todo.service";
 import AddItem from "./add-item.component";
 import ItemStatus from "./item-status.component";
+import "./board-list.component.css"
 
 export default class BoardsList extends Component {
     constructor(props){
